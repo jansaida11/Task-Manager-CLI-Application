@@ -19,4 +19,4 @@ I developed a console-based Task Manager application in Java using the MVC (Mode
 ## Tags:
 - Java, MVC, DAO-Factory Pattern, File I/O, Logging, Object-Oriented Programming, Design Patterns
 
-🔗 Check out the code here: [GitHub Repository Link]
+🔗 Check out the code here: [[GitHub Repository Link]](https://github.com/jansaida11/Task-Manager-CLI-Application/tree/main)
