@@ -20,5 +20,5 @@ I developed a console-based Task Manager application in Java using the MVC (Mode
 - Logging (Java Util Logging)
 
 ## Tags:
-- Java, MVC, DAO-Factory Pattern, File I/O, JDBC, MySQL, Logging, Object-Oriented Programming, Design Patter
+- Java, MVC, DAO-Factory Pattern, File I/O, JDBC, MySQL, Logging, Object-Oriented Programming, Design Pattern
 
