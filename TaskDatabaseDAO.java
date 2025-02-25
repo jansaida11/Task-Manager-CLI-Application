@@ -107,11 +107,7 @@ public class TaskDatabaseDAO implements TaskDAO {
 	public boolean doesTaskExists(String name, String catName) throws TaskException {
 
 		try (Connection con = JDBCHelper.getConnection();
-				// PreparedStatement psl1 = con.prepareStatement("SELECT sl_no FROM category
-				// WHERE catName = ?");
-				// PreparedStatement psl2 = con.prepareStatement("select task.name from task
-				// where name = ? and task.cat_sl_no = ?");
-				PreparedStatement psl = con.prepareStatement(
+			PreparedStatement psl = con.prepareStatement(
 						"SELECT task.name FROM task JOIN category ON task.cat_sl_no = category.sl_no WHERE task.name = ? AND category.catName = ?")) {
 
 			psl.setString(1, name);
@@ -119,16 +115,6 @@ public class TaskDatabaseDAO implements TaskDAO {
 			try (ResultSet rs = psl.executeQuery()) {
 				return rs.next();
 			}
-
-			/*
-			 * psl1.setString(1, catName); psl1.execute();
-			 * 
-			 * int sl =0; try (ResultSet rs = psl1.getResultSet()) { if(rs.next()) sl =
-			 * rs.getInt("sl_no"); }
-			 * 
-			 * psl2.setString(1, name); psl2.setInt(2, sl); psl2.execute(); try (ResultSet
-			 * rs = psl2.getResultSet()) { return rs.next(); }
-			 */
 
 		} catch (SQLException e) {
 			Logger.getInstance().log("" + e);
